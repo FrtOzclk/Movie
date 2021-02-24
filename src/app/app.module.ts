@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {AngularFireModule} from '@angularcore';
+import {AngularFireModule} from '@angular/fire';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirebaseService } from './services/firebase.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +20,7 @@ import { FirebaseService } from './services/firebase.service';
       storageBucket: "movie-98a82.appspot.com",
       messagingSenderId: "527203366096",
       appId: "1:527203366096:web:1602d6c8505143e65cdad5"
-    })
+    }),
     AppRoutingModule
   ],
   providers: [FirebaseService],
