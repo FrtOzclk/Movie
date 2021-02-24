@@ -21,8 +21,8 @@ export class AppComponent implements OnInit {
     if(this.firebaseService.isLoggedIn)
     this.isSignedIn= true
   }
-  async onSignip(email:string,password:string){
-    await this.firebaseService.signup(email,password)
+  async onSignin(email:string,password:string){
+    await this.firebaseService.signin(email,password)
     if(this.firebaseService.isLoggedIn)
     this.isSignedIn= true
   }
